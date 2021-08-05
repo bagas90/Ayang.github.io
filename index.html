@@ -10,15 +10,45 @@
                 background-size: 350px;
                 background-position: center;
             }
+            button{
+                border: 2px;
+                border-radius: 5px;
+                background-color: #dc3545;
+                justify-content: center;
+                display: flex;
+                position: absolute top-50 start-50;
+                margin: 10px 10px;
+                font-size: 25px;
+                font-family: 'Courier New', Courier, monospace;
+                color: white;
+            }
         </style>
         <title>Untuk Sayang Aku.Com</title>
     </head>
     <body>
+        <div class='position-absolute bottom-50 start-50 translate-middle'>
+        <button id="mute">PLAY</button></div>
         <script>
             var musik=new Audio();
             musik.src="I Like You So Much, Youll Know It (我多喜欢你你会知道)- A Love So Beautiful OST -Wang Junqi [English Cove.mp3";
             musik.loop=true;
             musik.play();
+            function mulaiAudio(){
+                var play=document.getElementById("play");
+                var play=document.getElementById("mute");
+
+                play.addEventListener('click',fplay);
+                mute.addEventListener('click',fmute);
+
+                function fplay(){
+                    if(musik.paused){
+                        musik.play();
+                    }else{
+                        musik.pause();
+                    }
+                }
+            }
+            window.addEventListener('load',mulaiAudio);
         </script>
         <div class='position-absolute top-50 start-50 translate-middle'>
             <button id='button' class='btn btn-danger btn-lg' onclick='mulai()'> Klik Disini! </button>
