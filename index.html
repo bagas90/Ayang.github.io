@@ -14,9 +14,12 @@
         <title>Untuk Sayang Aku.Com</title>
     </head>
     <body>
-        <audio hidden autoplay loop>
-            <source src="I Like You So Much, Youll Know It (我多喜欢你你会知道)- A Love So Beautiful OST -Wang Junqi [English Cove.mp3"> 
-        </audio>
+        <script>
+            var musik=new Audio();
+            musik.src="I Like You So Much, Youll Know It (我多喜欢你你会知道)- A Love So Beautiful OST -Wang Junqi [English Cove.mp3";
+            musik.loop=true;
+            musik.play();
+        </script>
         <div class='position-absolute top-50 start-50 translate-middle'>
             <button id='button' class='btn btn-danger btn-lg' onclick='mulai()'> Klik Disini! </button>
             <div id='iloveyou' style='display: none;'>
